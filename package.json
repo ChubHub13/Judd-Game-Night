@@ -1,0 +1,9 @@
+{
+  "name": "judd-game-night",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A shared lobby and chat for the Judd family game collection.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
