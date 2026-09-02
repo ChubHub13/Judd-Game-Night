@@ -9,7 +9,7 @@
     *{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif;background:radial-gradient(circle at 19% 0%,#4c1e5f 0,transparent 31rem),radial-gradient(circle at 92% 90%,#243d32 0,transparent 32rem),var(--deep)}
     .topbar{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:11px clamp(16px,4vw,48px);border-bottom:1px solid var(--line);background:rgba(10,5,14,.9);box-shadow:0 8px 30px rgba(0,0,0,.28)}
     .brand{display:flex;align-items:center;gap:12px}.mark{width:48px;height:48px;display:grid;place-items:center;border:1px solid var(--line);border-radius:14px;background:linear-gradient(145deg,#4c1e5f,#1a0b22);font:31px Georgia,serif;color:var(--gold)}
-    h1{margin:0;color:#ffe29a;font:clamp(22px,3vw,34px)/1 Georgia,serif;letter-spacing:.04em}.eyebrow{margin:5px 0 0;color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    h1{margin:0;color:#ffe29a;font:clamp(22px,3vw,34px)/1 Georgia,serif;letter-spacing:.04em}.version{margin-left:7px;color:var(--muted);font:800 10px/1 Segoe UI,Arial,sans-serif;letter-spacing:0;vertical-align:top}.eyebrow{margin:5px 0 0;color:var(--muted);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
     .status{display:flex;align-items:center;gap:8px;color:#bff0d0;font-size:12px;font-weight:800}.dot{width:8px;height:8px;border-radius:50%;background:#65d79d;box-shadow:0 0 12px #65d79d}
     main{width:min(1000px,100%);margin:auto;padding:clamp(24px,5vw,62px) clamp(16px,4vw,48px) 36px}.intro{max-width:660px}.intro h2{margin:0;color:#ffe29a;font:clamp(31px,5vw,54px)/1.02 Georgia,serif}.intro p{max-width:570px;color:var(--muted);font-size:16px;line-height:1.6}
     .game-area{margin-top:28px;padding:18px;border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:0 12px 30px rgba(0,0,0,.25)}.section-label{margin:0 0 13px;color:var(--gold);font:800 11px/1 Inter,Segoe UI,sans-serif;letter-spacing:.12em;text-transform:uppercase}
@@ -24,7 +24,7 @@
   </style>
 </head>
 <body>
-  <header class="topbar"><div class="brand"><div class="mark">♣</div><div><h1>Judd Game Night</h1><p class="eyebrow">Pick a table. Start playing.</p></div></div><div class="status"><span class="dot"></span> Family table open</div></header>
+  <header class="topbar"><div class="brand"><div class="mark">♣</div><div><h1>Judd Game Night <span class="version">v0.2.0</span></h1><p class="eyebrow">Pick a table. Start playing.</p></div></div><div class="status"><span class="dot"></span> Family table open</div></header>
   <main><section class="intro"><h2>What are we playing tonight?</h2><p>Choose a table and jump right in.</p></section><section class="game-area"><p class="section-label">Choose a game</p><div class="games" id="games"></div></section></main>
   <section class="game-frame" id="gameFrame"><button class="back" id="back">← Game Night</button><iframe id="gameView" title="Judd Game Night game"></iframe></section>
   <script src="games.config.js"></script>
