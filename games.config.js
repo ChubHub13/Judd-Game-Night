@@ -7,7 +7,7 @@ window.JUDD_GAMES = [
     id: "five-crowns",
     title: "Five Crowns",
     subtitle: "Three-handed card game",
-    path: "games/five-crowns/",
+    path: "https://five-crowns-7h0l.onrender.com/",
     icon: "crowns",
     enabled: true
   },
@@ -15,7 +15,7 @@ window.JUDD_GAMES = [
     id: "three-handed-rook",
     title: "Three-Handed Rook",
     subtitle: "Three-handed trick-taking",
-    path: "games/three-handed-rook/",
+    path: "https://five-crowns-7h0l.onrender.com/",
     icon: "rook",
     enabled: true
   }
