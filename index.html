@@ -23,7 +23,7 @@
   </style>
 </head>
 <body>
-  <header class="topbar"><div class="brand"><div class="mark">♣</div><div><h1>Judd Game Night <span class="version">v0.2.6</span></h1><p class="eyebrow">Pick a table. Start playing.</p></div></div><div class="status"><span class="dot"></span> Family table open</div></header>
+  <header class="topbar"><div class="brand"><div class="mark">♣</div><div><h1>Judd Game Night <span class="version">v0.2.7</span></h1><p class="eyebrow">Pick a table. Start playing.</p></div></div><div class="status"><span class="dot"></span> Family table open</div></header>
   <main><section class="intro"><h2>What are we playing tonight?</h2><p>Choose a table and jump right in.</p></section><section class="game-area"><p class="section-label">Choose a game</p><div class="games" id="games"></div></section></main>
   <script src="games.config.js"></script>
   <script>
@@ -31,7 +31,7 @@
     const hand = (kind, cards) => `<div class="hand ${kind}">${cards.map(card => `<div class="card">${card[0]}<span>${card[1]}</span>${card[2] ? `<em>${card[2]}</em>` : ""}</div>`).join("")}</div>`;
     const art = {
       crowns: hand("five", [["7","★"],["Q","♥"],["10","♣"],["K","♠"],["J","♦"]]),
-      rook: hand("rook", [["9","9","RED"],["14","14","YELLOW"],["10","10","GREEN"],["11","11","BLACK"],["5","5","RED"]])
+      rook: hand("five", [["A","★"],["Q","♥"],["10","♣"],["K","♠"],["J","♦"]])
     };
     const gamesEl = document.getElementById("games");
     games.filter(game => game.enabled).forEach(game => {
@@ -41,7 +41,7 @@
       button.onclick = () => openGame(game);
       gamesEl.append(button);
     });
-    function openGame(game){window.location.assign(game.path)}
+    function openGame(game){const joiner=game.path.includes("?")?"&":"?";window.location.assign(`${game.path}${joiner}gameNight=${encodeURIComponent(location.href)}&gameNightNew=1`)}
   </script>
 </body>
 </html>
