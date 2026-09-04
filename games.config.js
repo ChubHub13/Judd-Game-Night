@@ -18,4 +18,12 @@ window.JUDD_GAMES = [
     icon: "rook",
     enabled: true
   }
+  {
+  id: "qwixx",
+  title: "Qwixx",
+  subtitle: "Three-handed dice game",
+  path: "https://chubhub13.github.io/Qwixx/",
+  icon: "qwixx",
+  enabled: true
+}
 ];
