@@ -1,3 +1,4 @@
+/* Game Night catalog — replace the existing games.config.js with this file. */
 window.JUDD_GAMES = [
   {
     id: "five-crowns",
