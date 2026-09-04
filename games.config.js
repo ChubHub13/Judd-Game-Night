@@ -1,4 +1,3 @@
-/* Game Night catalog — replace the existing games.config.js with this file. */
 window.JUDD_GAMES = [
   {
     id: "five-crowns",
@@ -12,7 +11,7 @@ window.JUDD_GAMES = [
     id: "three-handed-rook",
     title: "Three-Handed Rook",
     subtitle: "Three-handed trick-taking",
-    path: "https://three-handed-judd-rook1.onrender.com/",
+    path: "https://judd-three-handed-rook1.onrender.com/",
     icon: "rook",
     enabled: true
   },
