@@ -1,6 +1,4 @@
-/*
- * Add new games here. The \`path\` can be a full https URL.
- */
+/* Game Night catalog — replace the existing games.config.js with this file. */
 window.JUDD_GAMES = [
   {
     id: "five-crowns",
@@ -17,13 +15,13 @@ window.JUDD_GAMES = [
     path: "https://three-handed-judd-rook.onrender.com/",
     icon: "rook",
     enabled: true
-  }
+  },
   {
-  id: "qwixx",
-  title: "Qwixx",
-  subtitle: "Three-handed dice game",
-  path: "https://chubhub13.github.io/Qwixx/",
-  icon: "qwixx",
-  enabled: true
-}
+    id: "qwixx",
+    title: "Qwixx",
+    subtitle: "Three-handed dice game",
+    path: "https://chubhub13.github.io/Qwixx/",
+    icon: "qwixx",
+    enabled: true
+  }
 ];
