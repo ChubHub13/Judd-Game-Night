@@ -8,14 +8,14 @@ window.JUDD_GAMES = [
     icon: "crowns",
     enabled: true
   },
- {
-  id: "three-handed-rook",
-  title: "Three-Handed Rook",
-  subtitle: "Three-handed trick-taking",
-  path: "https://chubhub13-rook-table.onrender.com/#",
-  icon: "rook",
-  enabled: true
-},,
+  {
+    id: "three-handed-rook",
+    title: "Three-Handed Rook",
+    subtitle: "Three-handed trick-taking",
+    path: "https://chubhub13-rook-table.onrender.com/#",
+    icon: "rook",
+    enabled: true
+  },
   {
     id: "qwixx",
     title: "Qwixx",
@@ -25,3 +25,19 @@ window.JUDD_GAMES = [
     enabled: true
   }
 ];
+
+window.addEventListener("DOMContentLoaded", () => {
+  const css = `
+    .game-art .rook-art{display:flex;gap:6px;align-items:center;justify-content:center}
+    .game-art .rook-card{position:relative;width:40px;height:63px;border:2px solid currentColor;border-radius:7px;background:#fffdf7;box-shadow:2px 3px 0 #0004;color:#25232a;font:900 12px Georgia}
+    .game-art .rook-card span{position:absolute;top:5px;left:6px}.game-art .rook-card.r{color:#c93832}.game-art .rook-card.y{color:#d4a217}.game-art .rook-card.g{color:#24804f}.game-art .rook-card.b{color:#287ac1}
+    .game-art .qwixx-art{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;width:152px}.game-art .qwixx-die{display:grid;grid-template:repeat(3,7px)/repeat(3,7px);gap:5px;place-content:center;width:42px;height:42px;border:2px solid #fff9;border-radius:10px;box-shadow:2px 4px 0 #0004}.game-art .qwixx-die i{width:7px;height:7px;border-radius:50%;background:currentColor}.game-art .qwixx-die.white{background:#faf7ed;color:#1e2230}.game-art .qwixx-die.red{background:#d95057;color:#fff}.game-art .qwixx-die.yellow{background:#efd52f;color:#20202a}.game-art .qwixx-die.green{background:#1bae74;color:#fff}.game-art .qwixx-die.blue{background:#277dcc;color:#fff}`;
+  document.head.insertAdjacentHTML("beforeend", `<style>${css}</style>`);
+  const pip = (number, color) => { const spots=[[1,1],[1,3],[2,2],[3,1],[3,3],[1,2]]; return `<b class="qwixx-die ${color}">${spots.slice(0,number).map(([r,c])=>`<i style="grid-area:${r}/${c}"></i>`).join("")}</b>`; };
+  document.querySelectorAll(".game").forEach(card => {
+    const title = card.querySelector("h3")?.textContent;
+    const art = card.querySelector(".game-art"); if (!art) return;
+    if (title === "Three-Handed Rook") art.innerHTML = `<div class="rook-art"><b class="rook-card r"><span>1</span></b><b class="rook-card y"><span>5</span></b><b class="rook-card g"><span>10</span></b><b class="rook-card b"><span>14</span></b></div>`;
+    if (title === "Qwixx") art.innerHTML = `<div class="qwixx-art">${pip(3,"white")}${pip(4,"white")}${pip(1,"red")}${pip(1,"yellow")}${pip(5,"green")}${pip(6,"blue")}</div>`;
+  });
+});
