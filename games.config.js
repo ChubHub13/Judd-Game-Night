@@ -12,7 +12,7 @@ window.JUDD_GAMES = [
   id: "three-handed-rook",
   title: "Three-Handed Rook",
   subtitle: "Three-handed trick-taking",
-  path: "https://chubhub13-rook-table.onrender.com/",
+  path: "https://chubhub13-rook-table.onrender.com/#",
   icon: "rook",
   enabled: true
 },,
