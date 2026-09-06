@@ -20,7 +20,7 @@ window.JUDD_GAMES = [
     id: "qwixx",
     title: "Qwixx",
     subtitle: "Three-handed dice game",
-    path: "https://your-qwixx-service.onrender.com/#",
+    path: "https://qwixx-x41x.onrender.com/#",
     icon: "qwixx",
     enabled: true
   }
