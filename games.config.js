@@ -20,6 +20,14 @@ window.JUDD_GAMES = [
     enabled: true
   },
   {
+    id: "qwixx",
+    title: "Qwixx",
+    subtitle: "Three-handed dice game",
+    path: "https://qwixx-x41x.onrender.com/#",
+    icon: "qwixx",
+    enabled: true
+  },
+  {
     id: "rook-solitaire",
     title: "Rook Solitaire",
     subtitle: "A solo Rook challenge",
